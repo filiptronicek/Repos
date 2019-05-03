@@ -3,6 +3,7 @@ var currentRepoCount = 0;
 var username = 'filiptronicek';
 var langColor;
 var description;
+var language;
 var colors = {
 	Mercury: '#ff2b2b',
 	TypeScript: '#2b7489',
@@ -213,6 +214,11 @@ $.get('https://api.github.com/users/' + username + '/repos', {}, function(data) 
 				description = '';
 			} else {
 				var description = element.description;
+			}
+			if (element.language == null) {
+				language = '';
+			} else {
+				var language = element.language;
 				console.log('else');
 			}
 			console.log(element.full_name);
@@ -226,7 +232,7 @@ $.get('https://api.github.com/users/' + username + '/repos', {}, function(data) 
 					'</div><div class="lang"><span class="repo-language-color" style="background-color: ' +
 					colors[element.language] +
 					'"></span> ' +
-					element.language +
+					language +
 					'</div></div>'
 			);
 		}
