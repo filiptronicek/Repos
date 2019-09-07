@@ -8,8 +8,6 @@ body {
 }
 .repo {
 	padding-bottom: 4vh;
-	width: 359px;
-	height: 115px;
 	border: 5px solid black;
 }
 a {
@@ -17,14 +15,17 @@ a {
 	color: #0366d6;
 }
 #repos .repo {
-	-moz-border-radius: 7px 7px 7px 7px;
-	border: 1px solid;
-	border-color: #d1d5da !important;
+	-moz-border-radius: 3px 3px 3px 3px;
+	border: 1px solid rgb(234, 236, 239);
 	float: left;
 	margin: 10px;
 	min-height: 100px;
+	height: auto;
 	padding: 5px;
+	color: rgb(36, 41, 46);
+	border-radius: 3px !important;
 }
+
 div.repo {
 	word-wrap: break-word;
 	text-align: left;
@@ -34,13 +35,12 @@ div.repo {
 }
 .repo {
 	font-weight: 600 !important;
-	border-radius: 3px !important;
 }
 * {
 	box-sizing: border-box;
 }
 .desc {
-	font-size: 12px !IMPORTANT;
+	font-size: 14px !IMPORTANT;
 }
 .repo-language-color {
 	border-radius: 50%;
@@ -51,15 +51,12 @@ div.repo {
 	width: 12px;
 	font-size: 12px;
 }
-.lang {
-	position: relative;
-	bottom: 5%;
-}
+
 .repo {
 	position: relative;
 }
 .repo .lang {
-	position: absolute;
+	display: flex;
 	bottom: 12px;
 }
 .repo div {
@@ -68,8 +65,24 @@ div.repo {
 .repo .repo-name {
 	padding-top: 12px;
 }
-#input {
+
+.repo .stars {
+	right: 60% !important;
 	position: absolute;
-	top: 10px;
-	right: 20px;
+	bottom: 12px;
+}
+@media only screen and (max-width: 600px) {
+	.repo {
+		width: 100%;
+	}
+}
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+	.repo {
+		width: 48%;
+	}
+}
+@media only screen and (min-width: 900px) {
+	.repo {
+		width: 30%;
+	}
 }

@@ -51,10 +51,7 @@ div.repo {
 	width: 12px;
 	font-size: 12px;
 }
-.lang {
-	position: relative;
-	bottom: 5%;
-}
+
 .repo {
 	position: relative;
 }
@@ -72,4 +69,9 @@ div.repo {
 	position: absolute;
 	top: 10px;
 	right: 20px;
+}
+.repo .stars {
+	right: 60% !important;
+	position: absolute;
+	bottom: 12px;
 }
